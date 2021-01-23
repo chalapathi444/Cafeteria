@@ -12,32 +12,26 @@ class _ProductScreenState extends State<ProductScreen> {
   var products;
   bool _isLoading = false;
   @override
-  void didChangeDependencies() {
+  void didChangeDependencies() async {
     // TODO: implement didChangeDependencies
     if (products == null) {
+      print("here");
+      setState(() {
+        _isLoading = true;
+      });
       products = Provider.of<Products>(context, listen: true);
-      products.fechAndDecode();
+      await products.fechAndDecode();
+      setState(() {
+        _isLoading = false;
+      });
     }
     super.didChangeDependencies();
   }
 
-  void call() async {
-    setState(() {
-      _isLoading = true;
-    });
-    products = Provider.of<Products>(context, listen: true);
-    await products.fechAndDecode();
-    setState(() {
-      _isLoading = false;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    print("entering");
     var productsData = products.items();
-    if (productsData.isEmpty) {
-      call();
-    }
     return LayoutBuilder(builder: (ctx, constrants) {
       return productsData.isEmpty
           ? Container(

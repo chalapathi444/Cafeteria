@@ -59,20 +59,21 @@ class Products extends ChangeNotifier {
             'Delicious meals are tasty, appetizing, scrumptious, yummy, luscious, delectable, mouth-watering, fit for a king, delightful, lovely, wonderful, pleasant, enjoyable, appealing, enchanting, charming.'),*/
   ];
   void fechAndDecode() async {
-    if (fetched) return;
-    var url = "https://back-code.herokuapp.com/showItems";
-    Map<String, String> customHeaders = {"content-type": "application/json"};
-    var responce = await http.get(url, headers: customHeaders);
-    List<dynamic> lis = json.decode(responce.body);
-    for (int i = 0; i < lis.length; i++) {
-      print(lis[i]);
-      _items.add(Product(
-          title: lis[i]["item_name"],
-          delevaryTime: int.parse(lis[i]["delivery_time"].toString()),
-          description: lis[i]['description'],
-          imageUrl: lis[i]["image_url"],
-          isNonVeg: lis[i]["category"] == 1 ? true : false,
-          price: double.parse(lis[i]["price"].toString())));
+    if (!fetched) {
+      var url = "https://back-code.herokuapp.com/showItems";
+      Map<String, String> customHeaders = {"content-type": "application/json"};
+      var responce = await http.get(url, headers: customHeaders);
+      List<dynamic> lis = json.decode(responce.body);
+      for (int i = 0; i < lis.length; i++) {
+        print(lis[i]);
+        _items.add(Product(
+            title: lis[i]["item_name"],
+            delevaryTime: int.parse(lis[i]["delivery_time"].toString()),
+            description: lis[i]['description'],
+            imageUrl: lis[i]["image_url"],
+            isNonVeg: lis[i]["category"] == 1 ? true : false,
+            price: double.parse(lis[i]["price"].toString())));
+      }
     }
     print("the lenght is ");
     print(_items.length);

@@ -83,7 +83,7 @@ class _PaymentState extends State<Payment> {
           'Food Order',
           style: TextStyle(
               color: Colors.yellow[800],
-              fontSize: 30,
+              fontSize: 20,
               fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),

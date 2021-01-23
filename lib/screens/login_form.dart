@@ -5,7 +5,7 @@ import './admin_login.dart';
 import './user_login.dart';
 
 class Welcome extends StatelessWidget {
-  static const routeName = "/welcome";
+  static const routeName = "/login";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

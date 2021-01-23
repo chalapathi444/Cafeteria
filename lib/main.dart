@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: Welcome.routeName,
+        //home: Welcome(),
         routes: {
           AdimHomeScreen.routeName: (ctx) => AdimHomeScreen(),
           OverviewProductAdmin.routeName: (ctx) => OverviewProductAdmin(),

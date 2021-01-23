@@ -78,7 +78,14 @@ class _UserSingupFormState extends State<UserSingupForm> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(prime["imageUrl"]),
+                  Container(
+                    height: 150,
+                    width: 200,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: NetworkImage(prime["imageUrl"]))),
+                  ),
                   Text(
                     "Name: ${prime["fullName"]}",
                     style: TextStyle(fontSize: 14),

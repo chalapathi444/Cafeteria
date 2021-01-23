@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sample_project/providers/adminorders.dart';
+import 'package:sample_project/providers/products.dart';
+import 'package:sample_project/providers/userorders.dart';
 import 'package:sample_project/screens/admin_orders.dart';
 import '../screens/add_product.dart';
 import './products_screen.dart';
 
 class AdimHomeScreen extends StatefulWidget {
-  static const routeName = '/';
+  static const routeName = '/adminHome';
 
   @override
   _AdimHomeScreenState createState() => _AdimHomeScreenState();
@@ -52,7 +54,8 @@ class _AdimHomeScreenState extends State<AdimHomeScreen> {
               ),
               FlatButton(
                 onPressed: () {
-                  // Provider.of<Products>(context, listen: false).reset();
+                  Provider.of<Products>(context, listen: false).reset();
+                  Provider.of<UserOrders>(context, listen: false).reset();
                   Provider.of<Adminorders>(context, listen: false).reset();
                   Navigator.pop(ctx, true);
                 },

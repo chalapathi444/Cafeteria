@@ -134,7 +134,7 @@ class _UserSingupFormState extends State<UserSingupForm> {
       "emp_name": prime["fullName"],
       "empid": prime["employeeId"],
       "org_name": prime["organizationName"],
-      "email": prime["employeeId"],
+      "email": prime["e-mail"],
       "mobile": int.parse(prime["mobileNumber"]),
       "password": prime["password"],
       "id_card": prime["imageUrl"],

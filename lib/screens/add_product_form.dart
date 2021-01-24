@@ -153,7 +153,7 @@ class _ProductFormState extends State<ProductForm> {
             Container(
               margin: EdgeInsets.only(left: 30),
               child: Text(
-                "price",
+                "Price",
                 style: TextStyle(color: Colors.grey[600], fontSize: 17),
               ),
             ),
@@ -188,7 +188,7 @@ class _ProductFormState extends State<ProductForm> {
             Container(
               margin: EdgeInsets.only(left: 30),
               child: Text(
-                "Delivary time",
+                "Delivary Time",
                 style: TextStyle(color: Colors.grey[600], fontSize: 17),
               ),
             ),
@@ -272,6 +272,19 @@ class _ProductFormState extends State<ProductForm> {
                   }),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 30),
+              child: Text(
+                "Item Image",
+                style: TextStyle(color: Colors.grey[600], fontSize: 17),
+              ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             _image == null
                 ? Center(

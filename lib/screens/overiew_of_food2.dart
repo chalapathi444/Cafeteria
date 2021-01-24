@@ -69,7 +69,7 @@ class OverviewProductUser extends StatelessWidget {
             color: Colors.yellow[100],
             child: Text(
               food.title,
-              style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(

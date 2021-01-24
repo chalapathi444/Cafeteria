@@ -116,7 +116,7 @@ class _PaymentState extends State<Payment> {
                         child: Text(
                           widget.title,
                           style: TextStyle(
-                              fontSize: 27, fontWeight: FontWeight.w500),
+                              fontSize: 20, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
@@ -169,7 +169,7 @@ class _PaymentState extends State<Payment> {
               child: ListTile(
                 onTap: () => addOrder(
                     _count, widget.imageUrl, widget.price, widget.title),
-                subtitle: Text("pay here"),
+                subtitle: Text("Pay here"),
                 leading: Image.asset(
                   "lib/assets/images/debitcardimage.jpeg",
                   fit: BoxFit.fill,
@@ -194,7 +194,7 @@ class _PaymentState extends State<Payment> {
               child: ListTile(
                 onTap: () => addOrder(
                     _count, widget.imageUrl, widget.price, widget.title),
-                subtitle: Text("pay here"),
+                subtitle: Text("Pay here"),
                 leading: Image.asset(
                   "lib/assets/images/creditcard.jpg",
                   fit: BoxFit.fill,
@@ -219,7 +219,7 @@ class _PaymentState extends State<Payment> {
               child: ListTile(
                 onTap: () => addOrder(
                     _count, widget.imageUrl, widget.price, widget.title),
-                subtitle: Text("pay here"),
+                subtitle: Text("Pay here"),
                 leading: Image.asset(
                   "lib/assets/images/gpay.png",
                   fit: BoxFit.fill,
@@ -244,7 +244,7 @@ class _PaymentState extends State<Payment> {
               child: ListTile(
                 onTap: () => addOrder(
                     _count, widget.imageUrl, widget.price, widget.title),
-                subtitle: Text("pay here"),
+                subtitle: Text("Pay here"),
                 leading: Image.asset(
                   "lib/assets/images/phonepay.png",
                   fit: BoxFit.fill,

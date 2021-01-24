@@ -156,7 +156,7 @@ class _AdminLoginState extends State<AdminLogin> {
                             Container(
                               margin: EdgeInsets.only(left: 30),
                               child: Text(
-                                "password",
+                                "Password",
                                 style: TextStyle(
                                     color: Colors.grey[600], fontSize: 17),
                               ),

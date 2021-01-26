@@ -25,7 +25,7 @@ Office Cafteria is a mobile application in which the employees of the organizati
 
 ## Frameworks/Tools
 <ol>
-  <li>FrameWork</li>
+  <li>Flutter</li>
   <li>Node.js</li>
   <li>MongoDB</li>
 </ol>
